@@ -206,6 +206,11 @@ add_custom_target(check-lint echo '${LINT_FILES}' | xargs -n12 -P8
 include_directories(${CMAKE_SOURCE_DIR}/src/include)
 include_directories(${CMAKE_SOURCE_DIR}/third_part)
 
+find_package(Protobuf REQUIRED)
+include_directories(${Protobuf_INCLUDE_DIRS})
+message(${Protobuf_INCLUDE_DIRS})
+
+
 add_subdirectory(./src)
 add_subdirectory(./test)
 add_subdirectory(./third_part)
