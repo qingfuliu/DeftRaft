@@ -53,7 +53,7 @@ struct TableStruct_raft_2eproto {
 extern "C" {
 extern const ::google::protobuf::internal::DescriptorTable descriptor_table_raft_2eproto;
 }  // extern "C"
-namespace raftpb {
+namespace DeftRaft {
 enum ConfChangeTransition : int;
 extern const uint32_t ConfChangeTransition_internal_data_[];
 enum ConfChangeType : int;
@@ -98,25 +98,25 @@ class SnapshotMetadata;
 struct SnapshotMetadataDefaultTypeInternal;
 extern SnapshotMetadataDefaultTypeInternal _SnapshotMetadata_default_instance_;
 extern const ::google::protobuf::internal::ClassDataFull SnapshotMetadata_class_data_;
-}  // namespace raftpb
+}  // namespace DeftRaft
 namespace google {
 namespace protobuf {
 template <>
-internal::EnumTraitsT<::raftpb::ConfChangeTransition_internal_data_>
-    internal::EnumTraitsImpl::value<::raftpb::ConfChangeTransition>;
+internal::EnumTraitsT<::DeftRaft::ConfChangeTransition_internal_data_>
+    internal::EnumTraitsImpl::value<::DeftRaft::ConfChangeTransition>;
 template <>
-internal::EnumTraitsT<::raftpb::ConfChangeType_internal_data_>
-    internal::EnumTraitsImpl::value<::raftpb::ConfChangeType>;
+internal::EnumTraitsT<::DeftRaft::ConfChangeType_internal_data_>
+    internal::EnumTraitsImpl::value<::DeftRaft::ConfChangeType>;
 template <>
-internal::EnumTraitsT<::raftpb::EntryType_internal_data_>
-    internal::EnumTraitsImpl::value<::raftpb::EntryType>;
+internal::EnumTraitsT<::DeftRaft::EntryType_internal_data_>
+    internal::EnumTraitsImpl::value<::DeftRaft::EntryType>;
 template <>
-internal::EnumTraitsT<::raftpb::MessageType_internal_data_>
-    internal::EnumTraitsImpl::value<::raftpb::MessageType>;
+internal::EnumTraitsT<::DeftRaft::MessageType_internal_data_>
+    internal::EnumTraitsImpl::value<::DeftRaft::MessageType>;
 }  // namespace protobuf
 }  // namespace google
 
-namespace raftpb {
+namespace DeftRaft {
 enum EntryType : int {
   EntryNormal = 0,
   EntryConfChange = 1,
@@ -278,7 +278,7 @@ inline bool ConfChangeType_Parse(
 // -------------------------------------------------------------------
 
 class HardState final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:raftpb.HardState) */ {
+/* @@protoc_insertion_point(class_definition:DeftRaft.HardState) */ {
  public:
   inline HardState() : HardState(nullptr) {}
   ~HardState() PROTOBUF_FINAL;
@@ -396,7 +396,7 @@ class HardState final : public ::google::protobuf::Message
  private:
   template <typename T>
   friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
-  static ::absl::string_view FullMessageName() { return "raftpb.HardState"; }
+  static ::absl::string_view FullMessageName() { return "DeftRaft.HardState"; }
 
  protected:
   explicit HardState(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
@@ -457,7 +457,7 @@ class HardState final : public ::google::protobuf::Message
   void _internal_set_commit(::uint64_t value);
 
   public:
-  // @@protoc_insertion_point(class_scope:raftpb.HardState)
+  // @@protoc_insertion_point(class_scope:DeftRaft.HardState)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
@@ -496,7 +496,7 @@ extern const ::google::protobuf::internal::ClassDataFull HardState_class_data_;
 // -------------------------------------------------------------------
 
 class Entry final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:raftpb.Entry) */ {
+/* @@protoc_insertion_point(class_definition:DeftRaft.Entry) */ {
  public:
   inline Entry() : Entry(nullptr) {}
   ~Entry() PROTOBUF_FINAL;
@@ -614,7 +614,7 @@ class Entry final : public ::google::protobuf::Message
  private:
   template <typename T>
   friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
-  static ::absl::string_view FullMessageName() { return "raftpb.Entry"; }
+  static ::absl::string_view FullMessageName() { return "DeftRaft.Entry"; }
 
  protected:
   explicit Entry(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
@@ -681,18 +681,18 @@ class Entry final : public ::google::protobuf::Message
   void _internal_set_index(::uint64_t value);
 
   public:
-  // optional .raftpb.EntryType Type = 1;
+  // optional .DeftRaft.EntryType Type = 1;
   bool has_type() const;
   void clear_type() ;
-  ::raftpb::EntryType type() const;
-  void set_type(::raftpb::EntryType value);
+  ::DeftRaft::EntryType type() const;
+  void set_type(::DeftRaft::EntryType value);
 
   private:
-  ::raftpb::EntryType _internal_type() const;
-  void _internal_set_type(::raftpb::EntryType value);
+  ::DeftRaft::EntryType _internal_type() const;
+  void _internal_set_type(::DeftRaft::EntryType value);
 
   public:
-  // @@protoc_insertion_point(class_scope:raftpb.Entry)
+  // @@protoc_insertion_point(class_scope:DeftRaft.Entry)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
@@ -732,7 +732,7 @@ extern const ::google::protobuf::internal::ClassDataFull Entry_class_data_;
 // -------------------------------------------------------------------
 
 class ConfState final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:raftpb.ConfState) */ {
+/* @@protoc_insertion_point(class_definition:DeftRaft.ConfState) */ {
  public:
   inline ConfState() : ConfState(nullptr) {}
   ~ConfState() PROTOBUF_FINAL;
@@ -850,7 +850,7 @@ class ConfState final : public ::google::protobuf::Message
  private:
   template <typename T>
   friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
-  static ::absl::string_view FullMessageName() { return "raftpb.ConfState"; }
+  static ::absl::string_view FullMessageName() { return "DeftRaft.ConfState"; }
 
  protected:
   explicit ConfState(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
@@ -963,7 +963,7 @@ class ConfState final : public ::google::protobuf::Message
   void _internal_set_auto_leave(bool value);
 
   public:
-  // @@protoc_insertion_point(class_scope:raftpb.ConfState)
+  // @@protoc_insertion_point(class_scope:DeftRaft.ConfState)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
@@ -1004,7 +1004,7 @@ extern const ::google::protobuf::internal::ClassDataFull ConfState_class_data_;
 // -------------------------------------------------------------------
 
 class ConfChangeSingle final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:raftpb.ConfChangeSingle) */ {
+/* @@protoc_insertion_point(class_definition:DeftRaft.ConfChangeSingle) */ {
  public:
   inline ConfChangeSingle() : ConfChangeSingle(nullptr) {}
   ~ConfChangeSingle() PROTOBUF_FINAL;
@@ -1122,7 +1122,7 @@ class ConfChangeSingle final : public ::google::protobuf::Message
  private:
   template <typename T>
   friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
-  static ::absl::string_view FullMessageName() { return "raftpb.ConfChangeSingle"; }
+  static ::absl::string_view FullMessageName() { return "DeftRaft.ConfChangeSingle"; }
 
  protected:
   explicit ConfChangeSingle(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
@@ -1160,18 +1160,18 @@ class ConfChangeSingle final : public ::google::protobuf::Message
   void _internal_set_node_id(::uint64_t value);
 
   public:
-  // optional .raftpb.ConfChangeType type = 1;
+  // optional .DeftRaft.ConfChangeType type = 1;
   bool has_type() const;
   void clear_type() ;
-  ::raftpb::ConfChangeType type() const;
-  void set_type(::raftpb::ConfChangeType value);
+  ::DeftRaft::ConfChangeType type() const;
+  void set_type(::DeftRaft::ConfChangeType value);
 
   private:
-  ::raftpb::ConfChangeType _internal_type() const;
-  void _internal_set_type(::raftpb::ConfChangeType value);
+  ::DeftRaft::ConfChangeType _internal_type() const;
+  void _internal_set_type(::DeftRaft::ConfChangeType value);
 
   public:
-  // @@protoc_insertion_point(class_scope:raftpb.ConfChangeSingle)
+  // @@protoc_insertion_point(class_scope:DeftRaft.ConfChangeSingle)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
@@ -1209,7 +1209,7 @@ extern const ::google::protobuf::internal::ClassDataFull ConfChangeSingle_class_
 // -------------------------------------------------------------------
 
 class ConfChange final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:raftpb.ConfChange) */ {
+/* @@protoc_insertion_point(class_definition:DeftRaft.ConfChange) */ {
  public:
   inline ConfChange() : ConfChange(nullptr) {}
   ~ConfChange() PROTOBUF_FINAL;
@@ -1327,7 +1327,7 @@ class ConfChange final : public ::google::protobuf::Message
  private:
   template <typename T>
   friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
-  static ::absl::string_view FullMessageName() { return "raftpb.ConfChange"; }
+  static ::absl::string_view FullMessageName() { return "DeftRaft.ConfChange"; }
 
  protected:
   explicit ConfChange(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
@@ -1394,18 +1394,18 @@ class ConfChange final : public ::google::protobuf::Message
   void _internal_set_node_id(::uint64_t value);
 
   public:
-  // optional .raftpb.ConfChangeType type = 2;
+  // optional .DeftRaft.ConfChangeType type = 2;
   bool has_type() const;
   void clear_type() ;
-  ::raftpb::ConfChangeType type() const;
-  void set_type(::raftpb::ConfChangeType value);
+  ::DeftRaft::ConfChangeType type() const;
+  void set_type(::DeftRaft::ConfChangeType value);
 
   private:
-  ::raftpb::ConfChangeType _internal_type() const;
-  void _internal_set_type(::raftpb::ConfChangeType value);
+  ::DeftRaft::ConfChangeType _internal_type() const;
+  void _internal_set_type(::DeftRaft::ConfChangeType value);
 
   public:
-  // @@protoc_insertion_point(class_scope:raftpb.ConfChange)
+  // @@protoc_insertion_point(class_scope:DeftRaft.ConfChange)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
@@ -1445,7 +1445,7 @@ extern const ::google::protobuf::internal::ClassDataFull ConfChange_class_data_;
 // -------------------------------------------------------------------
 
 class SnapshotMetadata final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:raftpb.SnapshotMetadata) */ {
+/* @@protoc_insertion_point(class_definition:DeftRaft.SnapshotMetadata) */ {
  public:
   inline SnapshotMetadata() : SnapshotMetadata(nullptr) {}
   ~SnapshotMetadata() PROTOBUF_FINAL;
@@ -1563,7 +1563,7 @@ class SnapshotMetadata final : public ::google::protobuf::Message
  private:
   template <typename T>
   friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
-  static ::absl::string_view FullMessageName() { return "raftpb.SnapshotMetadata"; }
+  static ::absl::string_view FullMessageName() { return "DeftRaft.SnapshotMetadata"; }
 
  protected:
   explicit SnapshotMetadata(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
@@ -1591,19 +1591,19 @@ class SnapshotMetadata final : public ::google::protobuf::Message
     kIndexFieldNumber = 2,
     kTermFieldNumber = 3,
   };
-  // optional .raftpb.ConfState conf_state = 1;
+  // optional .DeftRaft.ConfState conf_state = 1;
   bool has_conf_state() const;
   void clear_conf_state() ;
-  const ::raftpb::ConfState& conf_state() const;
-  [[nodiscard]] ::raftpb::ConfState* PROTOBUF_NULLABLE release_conf_state();
-  ::raftpb::ConfState* PROTOBUF_NONNULL mutable_conf_state();
-  void set_allocated_conf_state(::raftpb::ConfState* PROTOBUF_NULLABLE value);
-  void unsafe_arena_set_allocated_conf_state(::raftpb::ConfState* PROTOBUF_NULLABLE value);
-  ::raftpb::ConfState* PROTOBUF_NULLABLE unsafe_arena_release_conf_state();
+  const ::DeftRaft::ConfState& conf_state() const;
+  [[nodiscard]] ::DeftRaft::ConfState* PROTOBUF_NULLABLE release_conf_state();
+  ::DeftRaft::ConfState* PROTOBUF_NONNULL mutable_conf_state();
+  void set_allocated_conf_state(::DeftRaft::ConfState* PROTOBUF_NULLABLE value);
+  void unsafe_arena_set_allocated_conf_state(::DeftRaft::ConfState* PROTOBUF_NULLABLE value);
+  ::DeftRaft::ConfState* PROTOBUF_NULLABLE unsafe_arena_release_conf_state();
 
   private:
-  const ::raftpb::ConfState& _internal_conf_state() const;
-  ::raftpb::ConfState* PROTOBUF_NONNULL _internal_mutable_conf_state();
+  const ::DeftRaft::ConfState& _internal_conf_state() const;
+  ::DeftRaft::ConfState* PROTOBUF_NONNULL _internal_mutable_conf_state();
 
   public:
   // optional uint64 index = 2;
@@ -1628,7 +1628,7 @@ class SnapshotMetadata final : public ::google::protobuf::Message
   void _internal_set_term(::uint64_t value);
 
   public:
-  // @@protoc_insertion_point(class_scope:raftpb.SnapshotMetadata)
+  // @@protoc_insertion_point(class_scope:DeftRaft.SnapshotMetadata)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
@@ -1654,7 +1654,7 @@ class SnapshotMetadata final : public ::google::protobuf::Message
         const SnapshotMetadata& from_msg);
     ::google::protobuf::internal::HasBits<1> _has_bits_;
     ::google::protobuf::internal::CachedSize _cached_size_;
-    ::raftpb::ConfState* PROTOBUF_NULLABLE conf_state_;
+    ::DeftRaft::ConfState* PROTOBUF_NULLABLE conf_state_;
     ::uint64_t index_;
     ::uint64_t term_;
     PROTOBUF_TSAN_DECLARE_MEMBER
@@ -1667,7 +1667,7 @@ extern const ::google::protobuf::internal::ClassDataFull SnapshotMetadata_class_
 // -------------------------------------------------------------------
 
 class ConfChangeV2 final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:raftpb.ConfChangeV2) */ {
+/* @@protoc_insertion_point(class_definition:DeftRaft.ConfChangeV2) */ {
  public:
   inline ConfChangeV2() : ConfChangeV2(nullptr) {}
   ~ConfChangeV2() PROTOBUF_FINAL;
@@ -1785,7 +1785,7 @@ class ConfChangeV2 final : public ::google::protobuf::Message
  private:
   template <typename T>
   friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
-  static ::absl::string_view FullMessageName() { return "raftpb.ConfChangeV2"; }
+  static ::absl::string_view FullMessageName() { return "DeftRaft.ConfChangeV2"; }
 
  protected:
   explicit ConfChangeV2(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
@@ -1813,23 +1813,23 @@ class ConfChangeV2 final : public ::google::protobuf::Message
     kContextFieldNumber = 3,
     kTransitionFieldNumber = 1,
   };
-  // repeated .raftpb.ConfChangeSingle changes = 2;
+  // repeated .DeftRaft.ConfChangeSingle changes = 2;
   int changes_size() const;
   private:
   int _internal_changes_size() const;
 
   public:
   void clear_changes() ;
-  ::raftpb::ConfChangeSingle* PROTOBUF_NONNULL mutable_changes(int index);
-  ::google::protobuf::RepeatedPtrField<::raftpb::ConfChangeSingle>* PROTOBUF_NONNULL mutable_changes();
+  ::DeftRaft::ConfChangeSingle* PROTOBUF_NONNULL mutable_changes(int index);
+  ::google::protobuf::RepeatedPtrField<::DeftRaft::ConfChangeSingle>* PROTOBUF_NONNULL mutable_changes();
 
   private:
-  const ::google::protobuf::RepeatedPtrField<::raftpb::ConfChangeSingle>& _internal_changes() const;
-  ::google::protobuf::RepeatedPtrField<::raftpb::ConfChangeSingle>* PROTOBUF_NONNULL _internal_mutable_changes();
+  const ::google::protobuf::RepeatedPtrField<::DeftRaft::ConfChangeSingle>& _internal_changes() const;
+  ::google::protobuf::RepeatedPtrField<::DeftRaft::ConfChangeSingle>* PROTOBUF_NONNULL _internal_mutable_changes();
   public:
-  const ::raftpb::ConfChangeSingle& changes(int index) const;
-  ::raftpb::ConfChangeSingle* PROTOBUF_NONNULL add_changes();
-  const ::google::protobuf::RepeatedPtrField<::raftpb::ConfChangeSingle>& changes() const;
+  const ::DeftRaft::ConfChangeSingle& changes(int index) const;
+  ::DeftRaft::ConfChangeSingle* PROTOBUF_NONNULL add_changes();
+  const ::google::protobuf::RepeatedPtrField<::DeftRaft::ConfChangeSingle>& changes() const;
   // optional bytes context = 3;
   bool has_context() const;
   void clear_context() ;
@@ -1846,18 +1846,18 @@ class ConfChangeV2 final : public ::google::protobuf::Message
   std::string* PROTOBUF_NONNULL _internal_mutable_context();
 
   public:
-  // optional .raftpb.ConfChangeTransition transition = 1;
+  // optional .DeftRaft.ConfChangeTransition transition = 1;
   bool has_transition() const;
   void clear_transition() ;
-  ::raftpb::ConfChangeTransition transition() const;
-  void set_transition(::raftpb::ConfChangeTransition value);
+  ::DeftRaft::ConfChangeTransition transition() const;
+  void set_transition(::DeftRaft::ConfChangeTransition value);
 
   private:
-  ::raftpb::ConfChangeTransition _internal_transition() const;
-  void _internal_set_transition(::raftpb::ConfChangeTransition value);
+  ::DeftRaft::ConfChangeTransition _internal_transition() const;
+  void _internal_set_transition(::DeftRaft::ConfChangeTransition value);
 
   public:
-  // @@protoc_insertion_point(class_scope:raftpb.ConfChangeV2)
+  // @@protoc_insertion_point(class_scope:DeftRaft.ConfChangeV2)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
@@ -1883,7 +1883,7 @@ class ConfChangeV2 final : public ::google::protobuf::Message
         const ConfChangeV2& from_msg);
     ::google::protobuf::internal::HasBits<1> _has_bits_;
     ::google::protobuf::internal::CachedSize _cached_size_;
-    ::google::protobuf::RepeatedPtrField< ::raftpb::ConfChangeSingle > changes_;
+    ::google::protobuf::RepeatedPtrField< ::DeftRaft::ConfChangeSingle > changes_;
     ::google::protobuf::internal::ArenaStringPtr context_;
     int transition_;
     PROTOBUF_TSAN_DECLARE_MEMBER
@@ -1896,7 +1896,7 @@ extern const ::google::protobuf::internal::ClassDataFull ConfChangeV2_class_data
 // -------------------------------------------------------------------
 
 class Snapshot final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:raftpb.Snapshot) */ {
+/* @@protoc_insertion_point(class_definition:DeftRaft.Snapshot) */ {
  public:
   inline Snapshot() : Snapshot(nullptr) {}
   ~Snapshot() PROTOBUF_FINAL;
@@ -2014,7 +2014,7 @@ class Snapshot final : public ::google::protobuf::Message
  private:
   template <typename T>
   friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
-  static ::absl::string_view FullMessageName() { return "raftpb.Snapshot"; }
+  static ::absl::string_view FullMessageName() { return "DeftRaft.Snapshot"; }
 
  protected:
   explicit Snapshot(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
@@ -2057,22 +2057,22 @@ class Snapshot final : public ::google::protobuf::Message
   std::string* PROTOBUF_NONNULL _internal_mutable_data();
 
   public:
-  // optional .raftpb.SnapshotMetadata metadata = 2;
+  // optional .DeftRaft.SnapshotMetadata metadata = 2;
   bool has_metadata() const;
   void clear_metadata() ;
-  const ::raftpb::SnapshotMetadata& metadata() const;
-  [[nodiscard]] ::raftpb::SnapshotMetadata* PROTOBUF_NULLABLE release_metadata();
-  ::raftpb::SnapshotMetadata* PROTOBUF_NONNULL mutable_metadata();
-  void set_allocated_metadata(::raftpb::SnapshotMetadata* PROTOBUF_NULLABLE value);
-  void unsafe_arena_set_allocated_metadata(::raftpb::SnapshotMetadata* PROTOBUF_NULLABLE value);
-  ::raftpb::SnapshotMetadata* PROTOBUF_NULLABLE unsafe_arena_release_metadata();
+  const ::DeftRaft::SnapshotMetadata& metadata() const;
+  [[nodiscard]] ::DeftRaft::SnapshotMetadata* PROTOBUF_NULLABLE release_metadata();
+  ::DeftRaft::SnapshotMetadata* PROTOBUF_NONNULL mutable_metadata();
+  void set_allocated_metadata(::DeftRaft::SnapshotMetadata* PROTOBUF_NULLABLE value);
+  void unsafe_arena_set_allocated_metadata(::DeftRaft::SnapshotMetadata* PROTOBUF_NULLABLE value);
+  ::DeftRaft::SnapshotMetadata* PROTOBUF_NULLABLE unsafe_arena_release_metadata();
 
   private:
-  const ::raftpb::SnapshotMetadata& _internal_metadata() const;
-  ::raftpb::SnapshotMetadata* PROTOBUF_NONNULL _internal_mutable_metadata();
+  const ::DeftRaft::SnapshotMetadata& _internal_metadata() const;
+  ::DeftRaft::SnapshotMetadata* PROTOBUF_NONNULL _internal_mutable_metadata();
 
   public:
-  // @@protoc_insertion_point(class_scope:raftpb.Snapshot)
+  // @@protoc_insertion_point(class_scope:DeftRaft.Snapshot)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
@@ -2099,7 +2099,7 @@ class Snapshot final : public ::google::protobuf::Message
     ::google::protobuf::internal::HasBits<1> _has_bits_;
     ::google::protobuf::internal::CachedSize _cached_size_;
     ::google::protobuf::internal::ArenaStringPtr data_;
-    ::raftpb::SnapshotMetadata* PROTOBUF_NULLABLE metadata_;
+    ::DeftRaft::SnapshotMetadata* PROTOBUF_NULLABLE metadata_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
   union { Impl_ _impl_; };
@@ -2110,7 +2110,7 @@ extern const ::google::protobuf::internal::ClassDataFull Snapshot_class_data_;
 // -------------------------------------------------------------------
 
 class Message final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:raftpb.Message) */ {
+/* @@protoc_insertion_point(class_definition:DeftRaft.Message) */ {
  public:
   inline Message() : Message(nullptr) {}
   ~Message() PROTOBUF_FINAL;
@@ -2228,7 +2228,7 @@ class Message final : public ::google::protobuf::Message
  private:
   template <typename T>
   friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
-  static ::absl::string_view FullMessageName() { return "raftpb.Message"; }
+  static ::absl::string_view FullMessageName() { return "DeftRaft.Message"; }
 
  protected:
   explicit Message(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
@@ -2267,40 +2267,40 @@ class Message final : public ::google::protobuf::Message
     kRejectHintFieldNumber = 11,
     kVoteFieldNumber = 13,
   };
-  // repeated .raftpb.Entry entries = 7;
+  // repeated .DeftRaft.Entry entries = 7;
   int entries_size() const;
   private:
   int _internal_entries_size() const;
 
   public:
   void clear_entries() ;
-  ::raftpb::Entry* PROTOBUF_NONNULL mutable_entries(int index);
-  ::google::protobuf::RepeatedPtrField<::raftpb::Entry>* PROTOBUF_NONNULL mutable_entries();
+  ::DeftRaft::Entry* PROTOBUF_NONNULL mutable_entries(int index);
+  ::google::protobuf::RepeatedPtrField<::DeftRaft::Entry>* PROTOBUF_NONNULL mutable_entries();
 
   private:
-  const ::google::protobuf::RepeatedPtrField<::raftpb::Entry>& _internal_entries() const;
-  ::google::protobuf::RepeatedPtrField<::raftpb::Entry>* PROTOBUF_NONNULL _internal_mutable_entries();
+  const ::google::protobuf::RepeatedPtrField<::DeftRaft::Entry>& _internal_entries() const;
+  ::google::protobuf::RepeatedPtrField<::DeftRaft::Entry>* PROTOBUF_NONNULL _internal_mutable_entries();
   public:
-  const ::raftpb::Entry& entries(int index) const;
-  ::raftpb::Entry* PROTOBUF_NONNULL add_entries();
-  const ::google::protobuf::RepeatedPtrField<::raftpb::Entry>& entries() const;
-  // repeated .raftpb.Message responses = 14;
+  const ::DeftRaft::Entry& entries(int index) const;
+  ::DeftRaft::Entry* PROTOBUF_NONNULL add_entries();
+  const ::google::protobuf::RepeatedPtrField<::DeftRaft::Entry>& entries() const;
+  // repeated .DeftRaft.Message responses = 14;
   int responses_size() const;
   private:
   int _internal_responses_size() const;
 
   public:
   void clear_responses() ;
-  ::raftpb::Message* PROTOBUF_NONNULL mutable_responses(int index);
-  ::google::protobuf::RepeatedPtrField<::raftpb::Message>* PROTOBUF_NONNULL mutable_responses();
+  ::DeftRaft::Message* PROTOBUF_NONNULL mutable_responses(int index);
+  ::google::protobuf::RepeatedPtrField<::DeftRaft::Message>* PROTOBUF_NONNULL mutable_responses();
 
   private:
-  const ::google::protobuf::RepeatedPtrField<::raftpb::Message>& _internal_responses() const;
-  ::google::protobuf::RepeatedPtrField<::raftpb::Message>* PROTOBUF_NONNULL _internal_mutable_responses();
+  const ::google::protobuf::RepeatedPtrField<::DeftRaft::Message>& _internal_responses() const;
+  ::google::protobuf::RepeatedPtrField<::DeftRaft::Message>* PROTOBUF_NONNULL _internal_mutable_responses();
   public:
-  const ::raftpb::Message& responses(int index) const;
-  ::raftpb::Message* PROTOBUF_NONNULL add_responses();
-  const ::google::protobuf::RepeatedPtrField<::raftpb::Message>& responses() const;
+  const ::DeftRaft::Message& responses(int index) const;
+  ::DeftRaft::Message* PROTOBUF_NONNULL add_responses();
+  const ::google::protobuf::RepeatedPtrField<::DeftRaft::Message>& responses() const;
   // optional bytes context = 12;
   bool has_context() const;
   void clear_context() ;
@@ -2317,19 +2317,19 @@ class Message final : public ::google::protobuf::Message
   std::string* PROTOBUF_NONNULL _internal_mutable_context();
 
   public:
-  // optional .raftpb.Snapshot snapshot = 9;
+  // optional .DeftRaft.Snapshot snapshot = 9;
   bool has_snapshot() const;
   void clear_snapshot() ;
-  const ::raftpb::Snapshot& snapshot() const;
-  [[nodiscard]] ::raftpb::Snapshot* PROTOBUF_NULLABLE release_snapshot();
-  ::raftpb::Snapshot* PROTOBUF_NONNULL mutable_snapshot();
-  void set_allocated_snapshot(::raftpb::Snapshot* PROTOBUF_NULLABLE value);
-  void unsafe_arena_set_allocated_snapshot(::raftpb::Snapshot* PROTOBUF_NULLABLE value);
-  ::raftpb::Snapshot* PROTOBUF_NULLABLE unsafe_arena_release_snapshot();
+  const ::DeftRaft::Snapshot& snapshot() const;
+  [[nodiscard]] ::DeftRaft::Snapshot* PROTOBUF_NULLABLE release_snapshot();
+  ::DeftRaft::Snapshot* PROTOBUF_NONNULL mutable_snapshot();
+  void set_allocated_snapshot(::DeftRaft::Snapshot* PROTOBUF_NULLABLE value);
+  void unsafe_arena_set_allocated_snapshot(::DeftRaft::Snapshot* PROTOBUF_NULLABLE value);
+  ::DeftRaft::Snapshot* PROTOBUF_NULLABLE unsafe_arena_release_snapshot();
 
   private:
-  const ::raftpb::Snapshot& _internal_snapshot() const;
-  ::raftpb::Snapshot* PROTOBUF_NONNULL _internal_mutable_snapshot();
+  const ::DeftRaft::Snapshot& _internal_snapshot() const;
+  ::DeftRaft::Snapshot* PROTOBUF_NONNULL _internal_mutable_snapshot();
 
   public:
   // optional uint64 to = 2;
@@ -2376,15 +2376,15 @@ class Message final : public ::google::protobuf::Message
   void _internal_set_logterm(::uint64_t value);
 
   public:
-  // optional .raftpb.MessageType type = 1;
+  // optional .DeftRaft.MessageType type = 1;
   bool has_type() const;
   void clear_type() ;
-  ::raftpb::MessageType type() const;
-  void set_type(::raftpb::MessageType value);
+  ::DeftRaft::MessageType type() const;
+  void set_type(::DeftRaft::MessageType value);
 
   private:
-  ::raftpb::MessageType _internal_type() const;
-  void _internal_set_type(::raftpb::MessageType value);
+  ::DeftRaft::MessageType _internal_type() const;
+  void _internal_set_type(::DeftRaft::MessageType value);
 
   public:
   // optional bool reject = 10;
@@ -2442,7 +2442,7 @@ class Message final : public ::google::protobuf::Message
   void _internal_set_vote(::uint64_t value);
 
   public:
-  // @@protoc_insertion_point(class_scope:raftpb.Message)
+  // @@protoc_insertion_point(class_scope:DeftRaft.Message)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
@@ -2468,10 +2468,10 @@ class Message final : public ::google::protobuf::Message
         const Message& from_msg);
     ::google::protobuf::internal::HasBits<1> _has_bits_;
     ::google::protobuf::internal::CachedSize _cached_size_;
-    ::google::protobuf::RepeatedPtrField< ::raftpb::Entry > entries_;
-    ::google::protobuf::RepeatedPtrField< ::raftpb::Message > responses_;
+    ::google::protobuf::RepeatedPtrField< ::DeftRaft::Entry > entries_;
+    ::google::protobuf::RepeatedPtrField< ::DeftRaft::Message > responses_;
     ::google::protobuf::internal::ArenaStringPtr context_;
-    ::raftpb::Snapshot* PROTOBUF_NULLABLE snapshot_;
+    ::DeftRaft::Snapshot* PROTOBUF_NULLABLE snapshot_;
     ::uint64_t to_;
     ::uint64_t from_;
     ::uint64_t term_;
@@ -2517,13 +2517,13 @@ inline void Entry::clear_term() {
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline ::uint64_t Entry::term() const {
-  // @@protoc_insertion_point(field_get:raftpb.Entry.Term)
+  // @@protoc_insertion_point(field_get:DeftRaft.Entry.Term)
   return _internal_term();
 }
 inline void Entry::set_term(::uint64_t value) {
   _internal_set_term(value);
   _impl_._has_bits_[0] |= 0x00000002u;
-  // @@protoc_insertion_point(field_set:raftpb.Entry.Term)
+  // @@protoc_insertion_point(field_set:DeftRaft.Entry.Term)
 }
 inline ::uint64_t Entry::_internal_term() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
@@ -2545,13 +2545,13 @@ inline void Entry::clear_index() {
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline ::uint64_t Entry::index() const {
-  // @@protoc_insertion_point(field_get:raftpb.Entry.Index)
+  // @@protoc_insertion_point(field_get:DeftRaft.Entry.Index)
   return _internal_index();
 }
 inline void Entry::set_index(::uint64_t value) {
   _internal_set_index(value);
   _impl_._has_bits_[0] |= 0x00000004u;
-  // @@protoc_insertion_point(field_set:raftpb.Entry.Index)
+  // @@protoc_insertion_point(field_set:DeftRaft.Entry.Index)
 }
 inline ::uint64_t Entry::_internal_index() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
@@ -2562,7 +2562,7 @@ inline void Entry::_internal_set_index(::uint64_t value) {
   _impl_.index_ = value;
 }
 
-// optional .raftpb.EntryType Type = 1;
+// optional .DeftRaft.EntryType Type = 1;
 inline bool Entry::has_type() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -2572,24 +2572,24 @@ inline void Entry::clear_type() {
   _impl_.type_ = 0;
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline ::raftpb::EntryType Entry::type() const {
-  // @@protoc_insertion_point(field_get:raftpb.Entry.Type)
+inline ::DeftRaft::EntryType Entry::type() const {
+  // @@protoc_insertion_point(field_get:DeftRaft.Entry.Type)
   return _internal_type();
 }
-inline void Entry::set_type(::raftpb::EntryType value) {
+inline void Entry::set_type(::DeftRaft::EntryType value) {
   _internal_set_type(value);
   _impl_._has_bits_[0] |= 0x00000008u;
-  // @@protoc_insertion_point(field_set:raftpb.Entry.Type)
+  // @@protoc_insertion_point(field_set:DeftRaft.Entry.Type)
 }
-inline ::raftpb::EntryType Entry::_internal_type() const {
+inline ::DeftRaft::EntryType Entry::_internal_type() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
-  return static_cast<::raftpb::EntryType>(_impl_.type_);
+  return static_cast<::DeftRaft::EntryType>(_impl_.type_);
 }
-inline void Entry::_internal_set_type(::raftpb::EntryType value) {
+inline void Entry::_internal_set_type(::DeftRaft::EntryType value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
 
                                           assert(::google::protobuf::internal::ValidateEnum(
-                                              value, ::raftpb::EntryType_internal_data_));
+                                              value, ::DeftRaft::EntryType_internal_data_));
                                           _impl_.type_ = value;
 }
 
@@ -2605,7 +2605,7 @@ inline void Entry::clear_data() {
 }
 inline const std::string& Entry::data() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:raftpb.Entry.Data)
+  // @@protoc_insertion_point(field_get:DeftRaft.Entry.Data)
   return _internal_data();
 }
 template <typename Arg_, typename... Args_>
@@ -2613,12 +2613,12 @@ PROTOBUF_ALWAYS_INLINE void Entry::set_data(Arg_&& arg, Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.data_.SetBytes(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:raftpb.Entry.Data)
+  // @@protoc_insertion_point(field_set:DeftRaft.Entry.Data)
 }
 inline std::string* PROTOBUF_NONNULL Entry::mutable_data()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_data();
-  // @@protoc_insertion_point(field_mutable:raftpb.Entry.Data)
+  // @@protoc_insertion_point(field_mutable:DeftRaft.Entry.Data)
   return _s;
 }
 inline const std::string& Entry::_internal_data() const {
@@ -2637,7 +2637,7 @@ inline std::string* PROTOBUF_NONNULL Entry::_internal_mutable_data() {
 }
 inline std::string* PROTOBUF_NULLABLE Entry::release_data() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:raftpb.Entry.Data)
+  // @@protoc_insertion_point(field_release:DeftRaft.Entry.Data)
   if ((_impl_._has_bits_[0] & 0x00000001u) == 0) {
     return nullptr;
   }
@@ -2659,14 +2659,14 @@ inline void Entry::set_allocated_data(std::string* PROTOBUF_NULLABLE value) {
   if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.data_.IsDefault()) {
     _impl_.data_.Set("", GetArena());
   }
-  // @@protoc_insertion_point(field_set_allocated:raftpb.Entry.Data)
+  // @@protoc_insertion_point(field_set_allocated:DeftRaft.Entry.Data)
 }
 
 // -------------------------------------------------------------------
 
 // SnapshotMetadata
 
-// optional .raftpb.ConfState conf_state = 1;
+// optional .DeftRaft.ConfState conf_state = 1;
 inline bool SnapshotMetadata::has_conf_state() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.conf_state_ != nullptr);
@@ -2677,34 +2677,34 @@ inline void SnapshotMetadata::clear_conf_state() {
   if (_impl_.conf_state_ != nullptr) _impl_.conf_state_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const ::raftpb::ConfState& SnapshotMetadata::_internal_conf_state() const {
+inline const ::DeftRaft::ConfState& SnapshotMetadata::_internal_conf_state() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
-  const ::raftpb::ConfState* p = _impl_.conf_state_;
-  return p != nullptr ? *p : reinterpret_cast<const ::raftpb::ConfState&>(::raftpb::_ConfState_default_instance_);
+  const ::DeftRaft::ConfState* p = _impl_.conf_state_;
+  return p != nullptr ? *p : reinterpret_cast<const ::DeftRaft::ConfState&>(::DeftRaft::_ConfState_default_instance_);
 }
-inline const ::raftpb::ConfState& SnapshotMetadata::conf_state() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:raftpb.SnapshotMetadata.conf_state)
+inline const ::DeftRaft::ConfState& SnapshotMetadata::conf_state() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:DeftRaft.SnapshotMetadata.conf_state)
   return _internal_conf_state();
 }
 inline void SnapshotMetadata::unsafe_arena_set_allocated_conf_state(
-    ::raftpb::ConfState* PROTOBUF_NULLABLE value) {
+    ::DeftRaft::ConfState* PROTOBUF_NULLABLE value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (GetArena() == nullptr) {
     delete reinterpret_cast<::google::protobuf::MessageLite*>(_impl_.conf_state_);
   }
-  _impl_.conf_state_ = reinterpret_cast<::raftpb::ConfState*>(value);
+  _impl_.conf_state_ = reinterpret_cast<::DeftRaft::ConfState*>(value);
   if (value != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:raftpb.SnapshotMetadata.conf_state)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:DeftRaft.SnapshotMetadata.conf_state)
 }
-inline ::raftpb::ConfState* PROTOBUF_NULLABLE SnapshotMetadata::release_conf_state() {
+inline ::DeftRaft::ConfState* PROTOBUF_NULLABLE SnapshotMetadata::release_conf_state() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
 
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::raftpb::ConfState* released = _impl_.conf_state_;
+  ::DeftRaft::ConfState* released = _impl_.conf_state_;
   _impl_.conf_state_ = nullptr;
   if (::google::protobuf::internal::DebugHardenForceCopyInRelease()) {
     auto* old = reinterpret_cast<::google::protobuf::MessageLite*>(released);
@@ -2719,31 +2719,31 @@ inline ::raftpb::ConfState* PROTOBUF_NULLABLE SnapshotMetadata::release_conf_sta
   }
   return released;
 }
-inline ::raftpb::ConfState* PROTOBUF_NULLABLE SnapshotMetadata::unsafe_arena_release_conf_state() {
+inline ::DeftRaft::ConfState* PROTOBUF_NULLABLE SnapshotMetadata::unsafe_arena_release_conf_state() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:raftpb.SnapshotMetadata.conf_state)
+  // @@protoc_insertion_point(field_release:DeftRaft.SnapshotMetadata.conf_state)
 
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::raftpb::ConfState* temp = _impl_.conf_state_;
+  ::DeftRaft::ConfState* temp = _impl_.conf_state_;
   _impl_.conf_state_ = nullptr;
   return temp;
 }
-inline ::raftpb::ConfState* PROTOBUF_NONNULL SnapshotMetadata::_internal_mutable_conf_state() {
+inline ::DeftRaft::ConfState* PROTOBUF_NONNULL SnapshotMetadata::_internal_mutable_conf_state() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (_impl_.conf_state_ == nullptr) {
-    auto* p = ::google::protobuf::Message::DefaultConstruct<::raftpb::ConfState>(GetArena());
-    _impl_.conf_state_ = reinterpret_cast<::raftpb::ConfState*>(p);
+    auto* p = ::google::protobuf::Message::DefaultConstruct<::DeftRaft::ConfState>(GetArena());
+    _impl_.conf_state_ = reinterpret_cast<::DeftRaft::ConfState*>(p);
   }
   return _impl_.conf_state_;
 }
-inline ::raftpb::ConfState* PROTOBUF_NONNULL SnapshotMetadata::mutable_conf_state()
+inline ::DeftRaft::ConfState* PROTOBUF_NONNULL SnapshotMetadata::mutable_conf_state()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
   _impl_._has_bits_[0] |= 0x00000001u;
-  ::raftpb::ConfState* _msg = _internal_mutable_conf_state();
-  // @@protoc_insertion_point(field_mutable:raftpb.SnapshotMetadata.conf_state)
+  ::DeftRaft::ConfState* _msg = _internal_mutable_conf_state();
+  // @@protoc_insertion_point(field_mutable:DeftRaft.SnapshotMetadata.conf_state)
   return _msg;
 }
-inline void SnapshotMetadata::set_allocated_conf_state(::raftpb::ConfState* PROTOBUF_NULLABLE value) {
+inline void SnapshotMetadata::set_allocated_conf_state(::DeftRaft::ConfState* PROTOBUF_NULLABLE value) {
   ::google::protobuf::Arena* message_arena = GetArena();
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (message_arena == nullptr) {
@@ -2760,8 +2760,8 @@ inline void SnapshotMetadata::set_allocated_conf_state(::raftpb::ConfState* PROT
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
 
-  _impl_.conf_state_ = reinterpret_cast<::raftpb::ConfState*>(value);
-  // @@protoc_insertion_point(field_set_allocated:raftpb.SnapshotMetadata.conf_state)
+  _impl_.conf_state_ = reinterpret_cast<::DeftRaft::ConfState*>(value);
+  // @@protoc_insertion_point(field_set_allocated:DeftRaft.SnapshotMetadata.conf_state)
 }
 
 // optional uint64 index = 2;
@@ -2775,13 +2775,13 @@ inline void SnapshotMetadata::clear_index() {
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline ::uint64_t SnapshotMetadata::index() const {
-  // @@protoc_insertion_point(field_get:raftpb.SnapshotMetadata.index)
+  // @@protoc_insertion_point(field_get:DeftRaft.SnapshotMetadata.index)
   return _internal_index();
 }
 inline void SnapshotMetadata::set_index(::uint64_t value) {
   _internal_set_index(value);
   _impl_._has_bits_[0] |= 0x00000002u;
-  // @@protoc_insertion_point(field_set:raftpb.SnapshotMetadata.index)
+  // @@protoc_insertion_point(field_set:DeftRaft.SnapshotMetadata.index)
 }
 inline ::uint64_t SnapshotMetadata::_internal_index() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
@@ -2803,13 +2803,13 @@ inline void SnapshotMetadata::clear_term() {
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline ::uint64_t SnapshotMetadata::term() const {
-  // @@protoc_insertion_point(field_get:raftpb.SnapshotMetadata.term)
+  // @@protoc_insertion_point(field_get:DeftRaft.SnapshotMetadata.term)
   return _internal_term();
 }
 inline void SnapshotMetadata::set_term(::uint64_t value) {
   _internal_set_term(value);
   _impl_._has_bits_[0] |= 0x00000004u;
-  // @@protoc_insertion_point(field_set:raftpb.SnapshotMetadata.term)
+  // @@protoc_insertion_point(field_set:DeftRaft.SnapshotMetadata.term)
 }
 inline ::uint64_t SnapshotMetadata::_internal_term() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
@@ -2836,7 +2836,7 @@ inline void Snapshot::clear_data() {
 }
 inline const std::string& Snapshot::data() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:raftpb.Snapshot.data)
+  // @@protoc_insertion_point(field_get:DeftRaft.Snapshot.data)
   return _internal_data();
 }
 template <typename Arg_, typename... Args_>
@@ -2844,12 +2844,12 @@ PROTOBUF_ALWAYS_INLINE void Snapshot::set_data(Arg_&& arg, Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.data_.SetBytes(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:raftpb.Snapshot.data)
+  // @@protoc_insertion_point(field_set:DeftRaft.Snapshot.data)
 }
 inline std::string* PROTOBUF_NONNULL Snapshot::mutable_data()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_data();
-  // @@protoc_insertion_point(field_mutable:raftpb.Snapshot.data)
+  // @@protoc_insertion_point(field_mutable:DeftRaft.Snapshot.data)
   return _s;
 }
 inline const std::string& Snapshot::_internal_data() const {
@@ -2868,7 +2868,7 @@ inline std::string* PROTOBUF_NONNULL Snapshot::_internal_mutable_data() {
 }
 inline std::string* PROTOBUF_NULLABLE Snapshot::release_data() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:raftpb.Snapshot.data)
+  // @@protoc_insertion_point(field_release:DeftRaft.Snapshot.data)
   if ((_impl_._has_bits_[0] & 0x00000001u) == 0) {
     return nullptr;
   }
@@ -2890,10 +2890,10 @@ inline void Snapshot::set_allocated_data(std::string* PROTOBUF_NULLABLE value) {
   if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.data_.IsDefault()) {
     _impl_.data_.Set("", GetArena());
   }
-  // @@protoc_insertion_point(field_set_allocated:raftpb.Snapshot.data)
+  // @@protoc_insertion_point(field_set_allocated:DeftRaft.Snapshot.data)
 }
 
-// optional .raftpb.SnapshotMetadata metadata = 2;
+// optional .DeftRaft.SnapshotMetadata metadata = 2;
 inline bool Snapshot::has_metadata() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.metadata_ != nullptr);
@@ -2904,34 +2904,34 @@ inline void Snapshot::clear_metadata() {
   if (_impl_.metadata_ != nullptr) _impl_.metadata_->Clear();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const ::raftpb::SnapshotMetadata& Snapshot::_internal_metadata() const {
+inline const ::DeftRaft::SnapshotMetadata& Snapshot::_internal_metadata() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
-  const ::raftpb::SnapshotMetadata* p = _impl_.metadata_;
-  return p != nullptr ? *p : reinterpret_cast<const ::raftpb::SnapshotMetadata&>(::raftpb::_SnapshotMetadata_default_instance_);
+  const ::DeftRaft::SnapshotMetadata* p = _impl_.metadata_;
+  return p != nullptr ? *p : reinterpret_cast<const ::DeftRaft::SnapshotMetadata&>(::DeftRaft::_SnapshotMetadata_default_instance_);
 }
-inline const ::raftpb::SnapshotMetadata& Snapshot::metadata() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:raftpb.Snapshot.metadata)
+inline const ::DeftRaft::SnapshotMetadata& Snapshot::metadata() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:DeftRaft.Snapshot.metadata)
   return _internal_metadata();
 }
 inline void Snapshot::unsafe_arena_set_allocated_metadata(
-    ::raftpb::SnapshotMetadata* PROTOBUF_NULLABLE value) {
+    ::DeftRaft::SnapshotMetadata* PROTOBUF_NULLABLE value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (GetArena() == nullptr) {
     delete reinterpret_cast<::google::protobuf::MessageLite*>(_impl_.metadata_);
   }
-  _impl_.metadata_ = reinterpret_cast<::raftpb::SnapshotMetadata*>(value);
+  _impl_.metadata_ = reinterpret_cast<::DeftRaft::SnapshotMetadata*>(value);
   if (value != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:raftpb.Snapshot.metadata)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:DeftRaft.Snapshot.metadata)
 }
-inline ::raftpb::SnapshotMetadata* PROTOBUF_NULLABLE Snapshot::release_metadata() {
+inline ::DeftRaft::SnapshotMetadata* PROTOBUF_NULLABLE Snapshot::release_metadata() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
 
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::raftpb::SnapshotMetadata* released = _impl_.metadata_;
+  ::DeftRaft::SnapshotMetadata* released = _impl_.metadata_;
   _impl_.metadata_ = nullptr;
   if (::google::protobuf::internal::DebugHardenForceCopyInRelease()) {
     auto* old = reinterpret_cast<::google::protobuf::MessageLite*>(released);
@@ -2946,31 +2946,31 @@ inline ::raftpb::SnapshotMetadata* PROTOBUF_NULLABLE Snapshot::release_metadata(
   }
   return released;
 }
-inline ::raftpb::SnapshotMetadata* PROTOBUF_NULLABLE Snapshot::unsafe_arena_release_metadata() {
+inline ::DeftRaft::SnapshotMetadata* PROTOBUF_NULLABLE Snapshot::unsafe_arena_release_metadata() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:raftpb.Snapshot.metadata)
+  // @@protoc_insertion_point(field_release:DeftRaft.Snapshot.metadata)
 
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::raftpb::SnapshotMetadata* temp = _impl_.metadata_;
+  ::DeftRaft::SnapshotMetadata* temp = _impl_.metadata_;
   _impl_.metadata_ = nullptr;
   return temp;
 }
-inline ::raftpb::SnapshotMetadata* PROTOBUF_NONNULL Snapshot::_internal_mutable_metadata() {
+inline ::DeftRaft::SnapshotMetadata* PROTOBUF_NONNULL Snapshot::_internal_mutable_metadata() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (_impl_.metadata_ == nullptr) {
-    auto* p = ::google::protobuf::Message::DefaultConstruct<::raftpb::SnapshotMetadata>(GetArena());
-    _impl_.metadata_ = reinterpret_cast<::raftpb::SnapshotMetadata*>(p);
+    auto* p = ::google::protobuf::Message::DefaultConstruct<::DeftRaft::SnapshotMetadata>(GetArena());
+    _impl_.metadata_ = reinterpret_cast<::DeftRaft::SnapshotMetadata*>(p);
   }
   return _impl_.metadata_;
 }
-inline ::raftpb::SnapshotMetadata* PROTOBUF_NONNULL Snapshot::mutable_metadata()
+inline ::DeftRaft::SnapshotMetadata* PROTOBUF_NONNULL Snapshot::mutable_metadata()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
   _impl_._has_bits_[0] |= 0x00000002u;
-  ::raftpb::SnapshotMetadata* _msg = _internal_mutable_metadata();
-  // @@protoc_insertion_point(field_mutable:raftpb.Snapshot.metadata)
+  ::DeftRaft::SnapshotMetadata* _msg = _internal_mutable_metadata();
+  // @@protoc_insertion_point(field_mutable:DeftRaft.Snapshot.metadata)
   return _msg;
 }
-inline void Snapshot::set_allocated_metadata(::raftpb::SnapshotMetadata* PROTOBUF_NULLABLE value) {
+inline void Snapshot::set_allocated_metadata(::DeftRaft::SnapshotMetadata* PROTOBUF_NULLABLE value) {
   ::google::protobuf::Arena* message_arena = GetArena();
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (message_arena == nullptr) {
@@ -2987,15 +2987,15 @@ inline void Snapshot::set_allocated_metadata(::raftpb::SnapshotMetadata* PROTOBU
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
 
-  _impl_.metadata_ = reinterpret_cast<::raftpb::SnapshotMetadata*>(value);
-  // @@protoc_insertion_point(field_set_allocated:raftpb.Snapshot.metadata)
+  _impl_.metadata_ = reinterpret_cast<::DeftRaft::SnapshotMetadata*>(value);
+  // @@protoc_insertion_point(field_set_allocated:DeftRaft.Snapshot.metadata)
 }
 
 // -------------------------------------------------------------------
 
 // Message
 
-// optional .raftpb.MessageType type = 1;
+// optional .DeftRaft.MessageType type = 1;
 inline bool Message::has_type() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -3005,24 +3005,24 @@ inline void Message::clear_type() {
   _impl_.type_ = 0;
   _impl_._has_bits_[0] &= ~0x00000040u;
 }
-inline ::raftpb::MessageType Message::type() const {
-  // @@protoc_insertion_point(field_get:raftpb.Message.type)
+inline ::DeftRaft::MessageType Message::type() const {
+  // @@protoc_insertion_point(field_get:DeftRaft.Message.type)
   return _internal_type();
 }
-inline void Message::set_type(::raftpb::MessageType value) {
+inline void Message::set_type(::DeftRaft::MessageType value) {
   _internal_set_type(value);
   _impl_._has_bits_[0] |= 0x00000040u;
-  // @@protoc_insertion_point(field_set:raftpb.Message.type)
+  // @@protoc_insertion_point(field_set:DeftRaft.Message.type)
 }
-inline ::raftpb::MessageType Message::_internal_type() const {
+inline ::DeftRaft::MessageType Message::_internal_type() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
-  return static_cast<::raftpb::MessageType>(_impl_.type_);
+  return static_cast<::DeftRaft::MessageType>(_impl_.type_);
 }
-inline void Message::_internal_set_type(::raftpb::MessageType value) {
+inline void Message::_internal_set_type(::DeftRaft::MessageType value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
 
                                           assert(::google::protobuf::internal::ValidateEnum(
-                                              value, ::raftpb::MessageType_internal_data_));
+                                              value, ::DeftRaft::MessageType_internal_data_));
                                           _impl_.type_ = value;
 }
 
@@ -3037,13 +3037,13 @@ inline void Message::clear_to() {
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline ::uint64_t Message::to() const {
-  // @@protoc_insertion_point(field_get:raftpb.Message.to)
+  // @@protoc_insertion_point(field_get:DeftRaft.Message.to)
   return _internal_to();
 }
 inline void Message::set_to(::uint64_t value) {
   _internal_set_to(value);
   _impl_._has_bits_[0] |= 0x00000004u;
-  // @@protoc_insertion_point(field_set:raftpb.Message.to)
+  // @@protoc_insertion_point(field_set:DeftRaft.Message.to)
 }
 inline ::uint64_t Message::_internal_to() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
@@ -3065,13 +3065,13 @@ inline void Message::clear_from() {
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline ::uint64_t Message::from() const {
-  // @@protoc_insertion_point(field_get:raftpb.Message.from)
+  // @@protoc_insertion_point(field_get:DeftRaft.Message.from)
   return _internal_from();
 }
 inline void Message::set_from(::uint64_t value) {
   _internal_set_from(value);
   _impl_._has_bits_[0] |= 0x00000008u;
-  // @@protoc_insertion_point(field_set:raftpb.Message.from)
+  // @@protoc_insertion_point(field_set:DeftRaft.Message.from)
 }
 inline ::uint64_t Message::_internal_from() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
@@ -3093,13 +3093,13 @@ inline void Message::clear_term() {
   _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline ::uint64_t Message::term() const {
-  // @@protoc_insertion_point(field_get:raftpb.Message.term)
+  // @@protoc_insertion_point(field_get:DeftRaft.Message.term)
   return _internal_term();
 }
 inline void Message::set_term(::uint64_t value) {
   _internal_set_term(value);
   _impl_._has_bits_[0] |= 0x00000010u;
-  // @@protoc_insertion_point(field_set:raftpb.Message.term)
+  // @@protoc_insertion_point(field_set:DeftRaft.Message.term)
 }
 inline ::uint64_t Message::_internal_term() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
@@ -3121,13 +3121,13 @@ inline void Message::clear_logterm() {
   _impl_._has_bits_[0] &= ~0x00000020u;
 }
 inline ::uint64_t Message::logterm() const {
-  // @@protoc_insertion_point(field_get:raftpb.Message.logTerm)
+  // @@protoc_insertion_point(field_get:DeftRaft.Message.logTerm)
   return _internal_logterm();
 }
 inline void Message::set_logterm(::uint64_t value) {
   _internal_set_logterm(value);
   _impl_._has_bits_[0] |= 0x00000020u;
-  // @@protoc_insertion_point(field_set:raftpb.Message.logTerm)
+  // @@protoc_insertion_point(field_set:DeftRaft.Message.logTerm)
 }
 inline ::uint64_t Message::_internal_logterm() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
@@ -3149,13 +3149,13 @@ inline void Message::clear_index() {
   _impl_._has_bits_[0] &= ~0x00000100u;
 }
 inline ::uint64_t Message::index() const {
-  // @@protoc_insertion_point(field_get:raftpb.Message.index)
+  // @@protoc_insertion_point(field_get:DeftRaft.Message.index)
   return _internal_index();
 }
 inline void Message::set_index(::uint64_t value) {
   _internal_set_index(value);
   _impl_._has_bits_[0] |= 0x00000100u;
-  // @@protoc_insertion_point(field_set:raftpb.Message.index)
+  // @@protoc_insertion_point(field_set:DeftRaft.Message.index)
 }
 inline ::uint64_t Message::_internal_index() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
@@ -3166,7 +3166,7 @@ inline void Message::_internal_set_index(::uint64_t value) {
   _impl_.index_ = value;
 }
 
-// repeated .raftpb.Entry entries = 7;
+// repeated .DeftRaft.Entry entries = 7;
 inline int Message::_internal_entries_size() const {
   return _internal_entries().size();
 }
@@ -3177,40 +3177,40 @@ inline void Message::clear_entries() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.entries_.Clear();
 }
-inline ::raftpb::Entry* PROTOBUF_NONNULL Message::mutable_entries(int index)
+inline ::DeftRaft::Entry* PROTOBUF_NONNULL Message::mutable_entries(int index)
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_mutable:raftpb.Message.entries)
+  // @@protoc_insertion_point(field_mutable:DeftRaft.Message.entries)
   return _internal_mutable_entries()->Mutable(index);
 }
-inline ::google::protobuf::RepeatedPtrField<::raftpb::Entry>* PROTOBUF_NONNULL Message::mutable_entries()
+inline ::google::protobuf::RepeatedPtrField<::DeftRaft::Entry>* PROTOBUF_NONNULL Message::mutable_entries()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_mutable_list:raftpb.Message.entries)
+  // @@protoc_insertion_point(field_mutable_list:DeftRaft.Message.entries)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   return _internal_mutable_entries();
 }
-inline const ::raftpb::Entry& Message::entries(int index) const
+inline const ::DeftRaft::Entry& Message::entries(int index) const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:raftpb.Message.entries)
+  // @@protoc_insertion_point(field_get:DeftRaft.Message.entries)
   return _internal_entries().Get(index);
 }
-inline ::raftpb::Entry* PROTOBUF_NONNULL Message::add_entries()
+inline ::DeftRaft::Entry* PROTOBUF_NONNULL Message::add_entries()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  ::raftpb::Entry* _add = _internal_mutable_entries()->Add();
-  // @@protoc_insertion_point(field_add:raftpb.Message.entries)
+  ::DeftRaft::Entry* _add = _internal_mutable_entries()->Add();
+  // @@protoc_insertion_point(field_add:DeftRaft.Message.entries)
   return _add;
 }
-inline const ::google::protobuf::RepeatedPtrField<::raftpb::Entry>& Message::entries() const
+inline const ::google::protobuf::RepeatedPtrField<::DeftRaft::Entry>& Message::entries() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_list:raftpb.Message.entries)
+  // @@protoc_insertion_point(field_list:DeftRaft.Message.entries)
   return _internal_entries();
 }
-inline const ::google::protobuf::RepeatedPtrField<::raftpb::Entry>&
+inline const ::google::protobuf::RepeatedPtrField<::DeftRaft::Entry>&
 Message::_internal_entries() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.entries_;
 }
-inline ::google::protobuf::RepeatedPtrField<::raftpb::Entry>* PROTOBUF_NONNULL
+inline ::google::protobuf::RepeatedPtrField<::DeftRaft::Entry>* PROTOBUF_NONNULL
 Message::_internal_mutable_entries() {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return &_impl_.entries_;
@@ -3227,13 +3227,13 @@ inline void Message::clear_commit() {
   _impl_._has_bits_[0] &= ~0x00000200u;
 }
 inline ::uint64_t Message::commit() const {
-  // @@protoc_insertion_point(field_get:raftpb.Message.commit)
+  // @@protoc_insertion_point(field_get:DeftRaft.Message.commit)
   return _internal_commit();
 }
 inline void Message::set_commit(::uint64_t value) {
   _internal_set_commit(value);
   _impl_._has_bits_[0] |= 0x00000200u;
-  // @@protoc_insertion_point(field_set:raftpb.Message.commit)
+  // @@protoc_insertion_point(field_set:DeftRaft.Message.commit)
 }
 inline ::uint64_t Message::_internal_commit() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
@@ -3255,13 +3255,13 @@ inline void Message::clear_vote() {
   _impl_._has_bits_[0] &= ~0x00000800u;
 }
 inline ::uint64_t Message::vote() const {
-  // @@protoc_insertion_point(field_get:raftpb.Message.vote)
+  // @@protoc_insertion_point(field_get:DeftRaft.Message.vote)
   return _internal_vote();
 }
 inline void Message::set_vote(::uint64_t value) {
   _internal_set_vote(value);
   _impl_._has_bits_[0] |= 0x00000800u;
-  // @@protoc_insertion_point(field_set:raftpb.Message.vote)
+  // @@protoc_insertion_point(field_set:DeftRaft.Message.vote)
 }
 inline ::uint64_t Message::_internal_vote() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
@@ -3272,7 +3272,7 @@ inline void Message::_internal_set_vote(::uint64_t value) {
   _impl_.vote_ = value;
 }
 
-// optional .raftpb.Snapshot snapshot = 9;
+// optional .DeftRaft.Snapshot snapshot = 9;
 inline bool Message::has_snapshot() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.snapshot_ != nullptr);
@@ -3283,34 +3283,34 @@ inline void Message::clear_snapshot() {
   if (_impl_.snapshot_ != nullptr) _impl_.snapshot_->Clear();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const ::raftpb::Snapshot& Message::_internal_snapshot() const {
+inline const ::DeftRaft::Snapshot& Message::_internal_snapshot() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
-  const ::raftpb::Snapshot* p = _impl_.snapshot_;
-  return p != nullptr ? *p : reinterpret_cast<const ::raftpb::Snapshot&>(::raftpb::_Snapshot_default_instance_);
+  const ::DeftRaft::Snapshot* p = _impl_.snapshot_;
+  return p != nullptr ? *p : reinterpret_cast<const ::DeftRaft::Snapshot&>(::DeftRaft::_Snapshot_default_instance_);
 }
-inline const ::raftpb::Snapshot& Message::snapshot() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:raftpb.Message.snapshot)
+inline const ::DeftRaft::Snapshot& Message::snapshot() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:DeftRaft.Message.snapshot)
   return _internal_snapshot();
 }
 inline void Message::unsafe_arena_set_allocated_snapshot(
-    ::raftpb::Snapshot* PROTOBUF_NULLABLE value) {
+    ::DeftRaft::Snapshot* PROTOBUF_NULLABLE value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (GetArena() == nullptr) {
     delete reinterpret_cast<::google::protobuf::MessageLite*>(_impl_.snapshot_);
   }
-  _impl_.snapshot_ = reinterpret_cast<::raftpb::Snapshot*>(value);
+  _impl_.snapshot_ = reinterpret_cast<::DeftRaft::Snapshot*>(value);
   if (value != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:raftpb.Message.snapshot)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:DeftRaft.Message.snapshot)
 }
-inline ::raftpb::Snapshot* PROTOBUF_NULLABLE Message::release_snapshot() {
+inline ::DeftRaft::Snapshot* PROTOBUF_NULLABLE Message::release_snapshot() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
 
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::raftpb::Snapshot* released = _impl_.snapshot_;
+  ::DeftRaft::Snapshot* released = _impl_.snapshot_;
   _impl_.snapshot_ = nullptr;
   if (::google::protobuf::internal::DebugHardenForceCopyInRelease()) {
     auto* old = reinterpret_cast<::google::protobuf::MessageLite*>(released);
@@ -3325,31 +3325,31 @@ inline ::raftpb::Snapshot* PROTOBUF_NULLABLE Message::release_snapshot() {
   }
   return released;
 }
-inline ::raftpb::Snapshot* PROTOBUF_NULLABLE Message::unsafe_arena_release_snapshot() {
+inline ::DeftRaft::Snapshot* PROTOBUF_NULLABLE Message::unsafe_arena_release_snapshot() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:raftpb.Message.snapshot)
+  // @@protoc_insertion_point(field_release:DeftRaft.Message.snapshot)
 
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::raftpb::Snapshot* temp = _impl_.snapshot_;
+  ::DeftRaft::Snapshot* temp = _impl_.snapshot_;
   _impl_.snapshot_ = nullptr;
   return temp;
 }
-inline ::raftpb::Snapshot* PROTOBUF_NONNULL Message::_internal_mutable_snapshot() {
+inline ::DeftRaft::Snapshot* PROTOBUF_NONNULL Message::_internal_mutable_snapshot() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (_impl_.snapshot_ == nullptr) {
-    auto* p = ::google::protobuf::Message::DefaultConstruct<::raftpb::Snapshot>(GetArena());
-    _impl_.snapshot_ = reinterpret_cast<::raftpb::Snapshot*>(p);
+    auto* p = ::google::protobuf::Message::DefaultConstruct<::DeftRaft::Snapshot>(GetArena());
+    _impl_.snapshot_ = reinterpret_cast<::DeftRaft::Snapshot*>(p);
   }
   return _impl_.snapshot_;
 }
-inline ::raftpb::Snapshot* PROTOBUF_NONNULL Message::mutable_snapshot()
+inline ::DeftRaft::Snapshot* PROTOBUF_NONNULL Message::mutable_snapshot()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
   _impl_._has_bits_[0] |= 0x00000002u;
-  ::raftpb::Snapshot* _msg = _internal_mutable_snapshot();
-  // @@protoc_insertion_point(field_mutable:raftpb.Message.snapshot)
+  ::DeftRaft::Snapshot* _msg = _internal_mutable_snapshot();
+  // @@protoc_insertion_point(field_mutable:DeftRaft.Message.snapshot)
   return _msg;
 }
-inline void Message::set_allocated_snapshot(::raftpb::Snapshot* PROTOBUF_NULLABLE value) {
+inline void Message::set_allocated_snapshot(::DeftRaft::Snapshot* PROTOBUF_NULLABLE value) {
   ::google::protobuf::Arena* message_arena = GetArena();
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (message_arena == nullptr) {
@@ -3366,8 +3366,8 @@ inline void Message::set_allocated_snapshot(::raftpb::Snapshot* PROTOBUF_NULLABL
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
 
-  _impl_.snapshot_ = reinterpret_cast<::raftpb::Snapshot*>(value);
-  // @@protoc_insertion_point(field_set_allocated:raftpb.Message.snapshot)
+  _impl_.snapshot_ = reinterpret_cast<::DeftRaft::Snapshot*>(value);
+  // @@protoc_insertion_point(field_set_allocated:DeftRaft.Message.snapshot)
 }
 
 // optional bool reject = 10;
@@ -3381,13 +3381,13 @@ inline void Message::clear_reject() {
   _impl_._has_bits_[0] &= ~0x00000080u;
 }
 inline bool Message::reject() const {
-  // @@protoc_insertion_point(field_get:raftpb.Message.reject)
+  // @@protoc_insertion_point(field_get:DeftRaft.Message.reject)
   return _internal_reject();
 }
 inline void Message::set_reject(bool value) {
   _internal_set_reject(value);
   _impl_._has_bits_[0] |= 0x00000080u;
-  // @@protoc_insertion_point(field_set:raftpb.Message.reject)
+  // @@protoc_insertion_point(field_set:DeftRaft.Message.reject)
 }
 inline bool Message::_internal_reject() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
@@ -3409,13 +3409,13 @@ inline void Message::clear_rejecthint() {
   _impl_._has_bits_[0] &= ~0x00000400u;
 }
 inline ::uint64_t Message::rejecthint() const {
-  // @@protoc_insertion_point(field_get:raftpb.Message.rejectHint)
+  // @@protoc_insertion_point(field_get:DeftRaft.Message.rejectHint)
   return _internal_rejecthint();
 }
 inline void Message::set_rejecthint(::uint64_t value) {
   _internal_set_rejecthint(value);
   _impl_._has_bits_[0] |= 0x00000400u;
-  // @@protoc_insertion_point(field_set:raftpb.Message.rejectHint)
+  // @@protoc_insertion_point(field_set:DeftRaft.Message.rejectHint)
 }
 inline ::uint64_t Message::_internal_rejecthint() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
@@ -3438,7 +3438,7 @@ inline void Message::clear_context() {
 }
 inline const std::string& Message::context() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:raftpb.Message.context)
+  // @@protoc_insertion_point(field_get:DeftRaft.Message.context)
   return _internal_context();
 }
 template <typename Arg_, typename... Args_>
@@ -3446,12 +3446,12 @@ PROTOBUF_ALWAYS_INLINE void Message::set_context(Arg_&& arg, Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.context_.SetBytes(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:raftpb.Message.context)
+  // @@protoc_insertion_point(field_set:DeftRaft.Message.context)
 }
 inline std::string* PROTOBUF_NONNULL Message::mutable_context()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_context();
-  // @@protoc_insertion_point(field_mutable:raftpb.Message.context)
+  // @@protoc_insertion_point(field_mutable:DeftRaft.Message.context)
   return _s;
 }
 inline const std::string& Message::_internal_context() const {
@@ -3470,7 +3470,7 @@ inline std::string* PROTOBUF_NONNULL Message::_internal_mutable_context() {
 }
 inline std::string* PROTOBUF_NULLABLE Message::release_context() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:raftpb.Message.context)
+  // @@protoc_insertion_point(field_release:DeftRaft.Message.context)
   if ((_impl_._has_bits_[0] & 0x00000001u) == 0) {
     return nullptr;
   }
@@ -3492,10 +3492,10 @@ inline void Message::set_allocated_context(std::string* PROTOBUF_NULLABLE value)
   if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.context_.IsDefault()) {
     _impl_.context_.Set("", GetArena());
   }
-  // @@protoc_insertion_point(field_set_allocated:raftpb.Message.context)
+  // @@protoc_insertion_point(field_set_allocated:DeftRaft.Message.context)
 }
 
-// repeated .raftpb.Message responses = 14;
+// repeated .DeftRaft.Message responses = 14;
 inline int Message::_internal_responses_size() const {
   return _internal_responses().size();
 }
@@ -3506,40 +3506,40 @@ inline void Message::clear_responses() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.responses_.Clear();
 }
-inline ::raftpb::Message* PROTOBUF_NONNULL Message::mutable_responses(int index)
+inline ::DeftRaft::Message* PROTOBUF_NONNULL Message::mutable_responses(int index)
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_mutable:raftpb.Message.responses)
+  // @@protoc_insertion_point(field_mutable:DeftRaft.Message.responses)
   return _internal_mutable_responses()->Mutable(index);
 }
-inline ::google::protobuf::RepeatedPtrField<::raftpb::Message>* PROTOBUF_NONNULL Message::mutable_responses()
+inline ::google::protobuf::RepeatedPtrField<::DeftRaft::Message>* PROTOBUF_NONNULL Message::mutable_responses()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_mutable_list:raftpb.Message.responses)
+  // @@protoc_insertion_point(field_mutable_list:DeftRaft.Message.responses)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   return _internal_mutable_responses();
 }
-inline const ::raftpb::Message& Message::responses(int index) const
+inline const ::DeftRaft::Message& Message::responses(int index) const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:raftpb.Message.responses)
+  // @@protoc_insertion_point(field_get:DeftRaft.Message.responses)
   return _internal_responses().Get(index);
 }
-inline ::raftpb::Message* PROTOBUF_NONNULL Message::add_responses()
+inline ::DeftRaft::Message* PROTOBUF_NONNULL Message::add_responses()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  ::raftpb::Message* _add = _internal_mutable_responses()->Add();
-  // @@protoc_insertion_point(field_add:raftpb.Message.responses)
+  ::DeftRaft::Message* _add = _internal_mutable_responses()->Add();
+  // @@protoc_insertion_point(field_add:DeftRaft.Message.responses)
   return _add;
 }
-inline const ::google::protobuf::RepeatedPtrField<::raftpb::Message>& Message::responses() const
+inline const ::google::protobuf::RepeatedPtrField<::DeftRaft::Message>& Message::responses() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_list:raftpb.Message.responses)
+  // @@protoc_insertion_point(field_list:DeftRaft.Message.responses)
   return _internal_responses();
 }
-inline const ::google::protobuf::RepeatedPtrField<::raftpb::Message>&
+inline const ::google::protobuf::RepeatedPtrField<::DeftRaft::Message>&
 Message::_internal_responses() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.responses_;
 }
-inline ::google::protobuf::RepeatedPtrField<::raftpb::Message>* PROTOBUF_NONNULL
+inline ::google::protobuf::RepeatedPtrField<::DeftRaft::Message>* PROTOBUF_NONNULL
 Message::_internal_mutable_responses() {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return &_impl_.responses_;
@@ -3560,13 +3560,13 @@ inline void HardState::clear_term() {
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline ::uint64_t HardState::term() const {
-  // @@protoc_insertion_point(field_get:raftpb.HardState.term)
+  // @@protoc_insertion_point(field_get:DeftRaft.HardState.term)
   return _internal_term();
 }
 inline void HardState::set_term(::uint64_t value) {
   _internal_set_term(value);
   _impl_._has_bits_[0] |= 0x00000001u;
-  // @@protoc_insertion_point(field_set:raftpb.HardState.term)
+  // @@protoc_insertion_point(field_set:DeftRaft.HardState.term)
 }
 inline ::uint64_t HardState::_internal_term() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
@@ -3588,13 +3588,13 @@ inline void HardState::clear_vote() {
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline ::uint64_t HardState::vote() const {
-  // @@protoc_insertion_point(field_get:raftpb.HardState.vote)
+  // @@protoc_insertion_point(field_get:DeftRaft.HardState.vote)
   return _internal_vote();
 }
 inline void HardState::set_vote(::uint64_t value) {
   _internal_set_vote(value);
   _impl_._has_bits_[0] |= 0x00000002u;
-  // @@protoc_insertion_point(field_set:raftpb.HardState.vote)
+  // @@protoc_insertion_point(field_set:DeftRaft.HardState.vote)
 }
 inline ::uint64_t HardState::_internal_vote() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
@@ -3616,13 +3616,13 @@ inline void HardState::clear_commit() {
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline ::uint64_t HardState::commit() const {
-  // @@protoc_insertion_point(field_get:raftpb.HardState.commit)
+  // @@protoc_insertion_point(field_get:DeftRaft.HardState.commit)
   return _internal_commit();
 }
 inline void HardState::set_commit(::uint64_t value) {
   _internal_set_commit(value);
   _impl_._has_bits_[0] |= 0x00000004u;
-  // @@protoc_insertion_point(field_set:raftpb.HardState.commit)
+  // @@protoc_insertion_point(field_set:DeftRaft.HardState.commit)
 }
 inline ::uint64_t HardState::_internal_commit() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
@@ -3649,26 +3649,26 @@ inline void ConfState::clear_voters() {
   _impl_.voters_.Clear();
 }
 inline ::uint64_t ConfState::voters(int index) const {
-  // @@protoc_insertion_point(field_get:raftpb.ConfState.voters)
+  // @@protoc_insertion_point(field_get:DeftRaft.ConfState.voters)
   return _internal_voters().Get(index);
 }
 inline void ConfState::set_voters(int index, ::uint64_t value) {
   _internal_mutable_voters()->Set(index, value);
-  // @@protoc_insertion_point(field_set:raftpb.ConfState.voters)
+  // @@protoc_insertion_point(field_set:DeftRaft.ConfState.voters)
 }
 inline void ConfState::add_voters(::uint64_t value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _internal_mutable_voters()->Add(value);
-  // @@protoc_insertion_point(field_add:raftpb.ConfState.voters)
+  // @@protoc_insertion_point(field_add:DeftRaft.ConfState.voters)
 }
 inline const ::google::protobuf::RepeatedField<::uint64_t>& ConfState::voters() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_list:raftpb.ConfState.voters)
+  // @@protoc_insertion_point(field_list:DeftRaft.ConfState.voters)
   return _internal_voters();
 }
 inline ::google::protobuf::RepeatedField<::uint64_t>* PROTOBUF_NONNULL ConfState::mutable_voters()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_mutable_list:raftpb.ConfState.voters)
+  // @@protoc_insertion_point(field_mutable_list:DeftRaft.ConfState.voters)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   return _internal_mutable_voters();
 }
@@ -3695,26 +3695,26 @@ inline void ConfState::clear_learners() {
   _impl_.learners_.Clear();
 }
 inline ::uint64_t ConfState::learners(int index) const {
-  // @@protoc_insertion_point(field_get:raftpb.ConfState.learners)
+  // @@protoc_insertion_point(field_get:DeftRaft.ConfState.learners)
   return _internal_learners().Get(index);
 }
 inline void ConfState::set_learners(int index, ::uint64_t value) {
   _internal_mutable_learners()->Set(index, value);
-  // @@protoc_insertion_point(field_set:raftpb.ConfState.learners)
+  // @@protoc_insertion_point(field_set:DeftRaft.ConfState.learners)
 }
 inline void ConfState::add_learners(::uint64_t value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _internal_mutable_learners()->Add(value);
-  // @@protoc_insertion_point(field_add:raftpb.ConfState.learners)
+  // @@protoc_insertion_point(field_add:DeftRaft.ConfState.learners)
 }
 inline const ::google::protobuf::RepeatedField<::uint64_t>& ConfState::learners() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_list:raftpb.ConfState.learners)
+  // @@protoc_insertion_point(field_list:DeftRaft.ConfState.learners)
   return _internal_learners();
 }
 inline ::google::protobuf::RepeatedField<::uint64_t>* PROTOBUF_NONNULL ConfState::mutable_learners()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_mutable_list:raftpb.ConfState.learners)
+  // @@protoc_insertion_point(field_mutable_list:DeftRaft.ConfState.learners)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   return _internal_mutable_learners();
 }
@@ -3741,26 +3741,26 @@ inline void ConfState::clear_voters_outgoing() {
   _impl_.voters_outgoing_.Clear();
 }
 inline ::uint64_t ConfState::voters_outgoing(int index) const {
-  // @@protoc_insertion_point(field_get:raftpb.ConfState.voters_outgoing)
+  // @@protoc_insertion_point(field_get:DeftRaft.ConfState.voters_outgoing)
   return _internal_voters_outgoing().Get(index);
 }
 inline void ConfState::set_voters_outgoing(int index, ::uint64_t value) {
   _internal_mutable_voters_outgoing()->Set(index, value);
-  // @@protoc_insertion_point(field_set:raftpb.ConfState.voters_outgoing)
+  // @@protoc_insertion_point(field_set:DeftRaft.ConfState.voters_outgoing)
 }
 inline void ConfState::add_voters_outgoing(::uint64_t value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _internal_mutable_voters_outgoing()->Add(value);
-  // @@protoc_insertion_point(field_add:raftpb.ConfState.voters_outgoing)
+  // @@protoc_insertion_point(field_add:DeftRaft.ConfState.voters_outgoing)
 }
 inline const ::google::protobuf::RepeatedField<::uint64_t>& ConfState::voters_outgoing() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_list:raftpb.ConfState.voters_outgoing)
+  // @@protoc_insertion_point(field_list:DeftRaft.ConfState.voters_outgoing)
   return _internal_voters_outgoing();
 }
 inline ::google::protobuf::RepeatedField<::uint64_t>* PROTOBUF_NONNULL ConfState::mutable_voters_outgoing()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_mutable_list:raftpb.ConfState.voters_outgoing)
+  // @@protoc_insertion_point(field_mutable_list:DeftRaft.ConfState.voters_outgoing)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   return _internal_mutable_voters_outgoing();
 }
@@ -3787,26 +3787,26 @@ inline void ConfState::clear_learners_next() {
   _impl_.learners_next_.Clear();
 }
 inline ::uint64_t ConfState::learners_next(int index) const {
-  // @@protoc_insertion_point(field_get:raftpb.ConfState.learners_next)
+  // @@protoc_insertion_point(field_get:DeftRaft.ConfState.learners_next)
   return _internal_learners_next().Get(index);
 }
 inline void ConfState::set_learners_next(int index, ::uint64_t value) {
   _internal_mutable_learners_next()->Set(index, value);
-  // @@protoc_insertion_point(field_set:raftpb.ConfState.learners_next)
+  // @@protoc_insertion_point(field_set:DeftRaft.ConfState.learners_next)
 }
 inline void ConfState::add_learners_next(::uint64_t value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _internal_mutable_learners_next()->Add(value);
-  // @@protoc_insertion_point(field_add:raftpb.ConfState.learners_next)
+  // @@protoc_insertion_point(field_add:DeftRaft.ConfState.learners_next)
 }
 inline const ::google::protobuf::RepeatedField<::uint64_t>& ConfState::learners_next() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_list:raftpb.ConfState.learners_next)
+  // @@protoc_insertion_point(field_list:DeftRaft.ConfState.learners_next)
   return _internal_learners_next();
 }
 inline ::google::protobuf::RepeatedField<::uint64_t>* PROTOBUF_NONNULL ConfState::mutable_learners_next()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_mutable_list:raftpb.ConfState.learners_next)
+  // @@protoc_insertion_point(field_mutable_list:DeftRaft.ConfState.learners_next)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   return _internal_mutable_learners_next();
 }
@@ -3832,13 +3832,13 @@ inline void ConfState::clear_auto_leave() {
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool ConfState::auto_leave() const {
-  // @@protoc_insertion_point(field_get:raftpb.ConfState.auto_leave)
+  // @@protoc_insertion_point(field_get:DeftRaft.ConfState.auto_leave)
   return _internal_auto_leave();
 }
 inline void ConfState::set_auto_leave(bool value) {
   _internal_set_auto_leave(value);
   _impl_._has_bits_[0] |= 0x00000001u;
-  // @@protoc_insertion_point(field_set:raftpb.ConfState.auto_leave)
+  // @@protoc_insertion_point(field_set:DeftRaft.ConfState.auto_leave)
 }
 inline bool ConfState::_internal_auto_leave() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
@@ -3853,7 +3853,7 @@ inline void ConfState::_internal_set_auto_leave(bool value) {
 
 // ConfChange
 
-// optional .raftpb.ConfChangeType type = 2;
+// optional .DeftRaft.ConfChangeType type = 2;
 inline bool ConfChange::has_type() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -3863,24 +3863,24 @@ inline void ConfChange::clear_type() {
   _impl_.type_ = 0;
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline ::raftpb::ConfChangeType ConfChange::type() const {
-  // @@protoc_insertion_point(field_get:raftpb.ConfChange.type)
+inline ::DeftRaft::ConfChangeType ConfChange::type() const {
+  // @@protoc_insertion_point(field_get:DeftRaft.ConfChange.type)
   return _internal_type();
 }
-inline void ConfChange::set_type(::raftpb::ConfChangeType value) {
+inline void ConfChange::set_type(::DeftRaft::ConfChangeType value) {
   _internal_set_type(value);
   _impl_._has_bits_[0] |= 0x00000008u;
-  // @@protoc_insertion_point(field_set:raftpb.ConfChange.type)
+  // @@protoc_insertion_point(field_set:DeftRaft.ConfChange.type)
 }
-inline ::raftpb::ConfChangeType ConfChange::_internal_type() const {
+inline ::DeftRaft::ConfChangeType ConfChange::_internal_type() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
-  return static_cast<::raftpb::ConfChangeType>(_impl_.type_);
+  return static_cast<::DeftRaft::ConfChangeType>(_impl_.type_);
 }
-inline void ConfChange::_internal_set_type(::raftpb::ConfChangeType value) {
+inline void ConfChange::_internal_set_type(::DeftRaft::ConfChangeType value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
 
                                           assert(::google::protobuf::internal::ValidateEnum(
-                                              value, ::raftpb::ConfChangeType_internal_data_));
+                                              value, ::DeftRaft::ConfChangeType_internal_data_));
                                           _impl_.type_ = value;
 }
 
@@ -3895,13 +3895,13 @@ inline void ConfChange::clear_node_id() {
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline ::uint64_t ConfChange::node_id() const {
-  // @@protoc_insertion_point(field_get:raftpb.ConfChange.node_id)
+  // @@protoc_insertion_point(field_get:DeftRaft.ConfChange.node_id)
   return _internal_node_id();
 }
 inline void ConfChange::set_node_id(::uint64_t value) {
   _internal_set_node_id(value);
   _impl_._has_bits_[0] |= 0x00000004u;
-  // @@protoc_insertion_point(field_set:raftpb.ConfChange.node_id)
+  // @@protoc_insertion_point(field_set:DeftRaft.ConfChange.node_id)
 }
 inline ::uint64_t ConfChange::_internal_node_id() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
@@ -3924,7 +3924,7 @@ inline void ConfChange::clear_context() {
 }
 inline const std::string& ConfChange::context() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:raftpb.ConfChange.context)
+  // @@protoc_insertion_point(field_get:DeftRaft.ConfChange.context)
   return _internal_context();
 }
 template <typename Arg_, typename... Args_>
@@ -3932,12 +3932,12 @@ PROTOBUF_ALWAYS_INLINE void ConfChange::set_context(Arg_&& arg, Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.context_.SetBytes(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:raftpb.ConfChange.context)
+  // @@protoc_insertion_point(field_set:DeftRaft.ConfChange.context)
 }
 inline std::string* PROTOBUF_NONNULL ConfChange::mutable_context()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_context();
-  // @@protoc_insertion_point(field_mutable:raftpb.ConfChange.context)
+  // @@protoc_insertion_point(field_mutable:DeftRaft.ConfChange.context)
   return _s;
 }
 inline const std::string& ConfChange::_internal_context() const {
@@ -3956,7 +3956,7 @@ inline std::string* PROTOBUF_NONNULL ConfChange::_internal_mutable_context() {
 }
 inline std::string* PROTOBUF_NULLABLE ConfChange::release_context() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:raftpb.ConfChange.context)
+  // @@protoc_insertion_point(field_release:DeftRaft.ConfChange.context)
   if ((_impl_._has_bits_[0] & 0x00000001u) == 0) {
     return nullptr;
   }
@@ -3978,7 +3978,7 @@ inline void ConfChange::set_allocated_context(std::string* PROTOBUF_NULLABLE val
   if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.context_.IsDefault()) {
     _impl_.context_.Set("", GetArena());
   }
-  // @@protoc_insertion_point(field_set_allocated:raftpb.ConfChange.context)
+  // @@protoc_insertion_point(field_set_allocated:DeftRaft.ConfChange.context)
 }
 
 // optional uint64 id = 1;
@@ -3992,13 +3992,13 @@ inline void ConfChange::clear_id() {
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline ::uint64_t ConfChange::id() const {
-  // @@protoc_insertion_point(field_get:raftpb.ConfChange.id)
+  // @@protoc_insertion_point(field_get:DeftRaft.ConfChange.id)
   return _internal_id();
 }
 inline void ConfChange::set_id(::uint64_t value) {
   _internal_set_id(value);
   _impl_._has_bits_[0] |= 0x00000002u;
-  // @@protoc_insertion_point(field_set:raftpb.ConfChange.id)
+  // @@protoc_insertion_point(field_set:DeftRaft.ConfChange.id)
 }
 inline ::uint64_t ConfChange::_internal_id() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
@@ -4013,7 +4013,7 @@ inline void ConfChange::_internal_set_id(::uint64_t value) {
 
 // ConfChangeSingle
 
-// optional .raftpb.ConfChangeType type = 1;
+// optional .DeftRaft.ConfChangeType type = 1;
 inline bool ConfChangeSingle::has_type() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -4023,24 +4023,24 @@ inline void ConfChangeSingle::clear_type() {
   _impl_.type_ = 0;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline ::raftpb::ConfChangeType ConfChangeSingle::type() const {
-  // @@protoc_insertion_point(field_get:raftpb.ConfChangeSingle.type)
+inline ::DeftRaft::ConfChangeType ConfChangeSingle::type() const {
+  // @@protoc_insertion_point(field_get:DeftRaft.ConfChangeSingle.type)
   return _internal_type();
 }
-inline void ConfChangeSingle::set_type(::raftpb::ConfChangeType value) {
+inline void ConfChangeSingle::set_type(::DeftRaft::ConfChangeType value) {
   _internal_set_type(value);
   _impl_._has_bits_[0] |= 0x00000002u;
-  // @@protoc_insertion_point(field_set:raftpb.ConfChangeSingle.type)
+  // @@protoc_insertion_point(field_set:DeftRaft.ConfChangeSingle.type)
 }
-inline ::raftpb::ConfChangeType ConfChangeSingle::_internal_type() const {
+inline ::DeftRaft::ConfChangeType ConfChangeSingle::_internal_type() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
-  return static_cast<::raftpb::ConfChangeType>(_impl_.type_);
+  return static_cast<::DeftRaft::ConfChangeType>(_impl_.type_);
 }
-inline void ConfChangeSingle::_internal_set_type(::raftpb::ConfChangeType value) {
+inline void ConfChangeSingle::_internal_set_type(::DeftRaft::ConfChangeType value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
 
                                           assert(::google::protobuf::internal::ValidateEnum(
-                                              value, ::raftpb::ConfChangeType_internal_data_));
+                                              value, ::DeftRaft::ConfChangeType_internal_data_));
                                           _impl_.type_ = value;
 }
 
@@ -4055,13 +4055,13 @@ inline void ConfChangeSingle::clear_node_id() {
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline ::uint64_t ConfChangeSingle::node_id() const {
-  // @@protoc_insertion_point(field_get:raftpb.ConfChangeSingle.node_id)
+  // @@protoc_insertion_point(field_get:DeftRaft.ConfChangeSingle.node_id)
   return _internal_node_id();
 }
 inline void ConfChangeSingle::set_node_id(::uint64_t value) {
   _internal_set_node_id(value);
   _impl_._has_bits_[0] |= 0x00000001u;
-  // @@protoc_insertion_point(field_set:raftpb.ConfChangeSingle.node_id)
+  // @@protoc_insertion_point(field_set:DeftRaft.ConfChangeSingle.node_id)
 }
 inline ::uint64_t ConfChangeSingle::_internal_node_id() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
@@ -4076,7 +4076,7 @@ inline void ConfChangeSingle::_internal_set_node_id(::uint64_t value) {
 
 // ConfChangeV2
 
-// optional .raftpb.ConfChangeTransition transition = 1;
+// optional .DeftRaft.ConfChangeTransition transition = 1;
 inline bool ConfChangeV2::has_transition() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -4086,28 +4086,28 @@ inline void ConfChangeV2::clear_transition() {
   _impl_.transition_ = 0;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline ::raftpb::ConfChangeTransition ConfChangeV2::transition() const {
-  // @@protoc_insertion_point(field_get:raftpb.ConfChangeV2.transition)
+inline ::DeftRaft::ConfChangeTransition ConfChangeV2::transition() const {
+  // @@protoc_insertion_point(field_get:DeftRaft.ConfChangeV2.transition)
   return _internal_transition();
 }
-inline void ConfChangeV2::set_transition(::raftpb::ConfChangeTransition value) {
+inline void ConfChangeV2::set_transition(::DeftRaft::ConfChangeTransition value) {
   _internal_set_transition(value);
   _impl_._has_bits_[0] |= 0x00000002u;
-  // @@protoc_insertion_point(field_set:raftpb.ConfChangeV2.transition)
+  // @@protoc_insertion_point(field_set:DeftRaft.ConfChangeV2.transition)
 }
-inline ::raftpb::ConfChangeTransition ConfChangeV2::_internal_transition() const {
+inline ::DeftRaft::ConfChangeTransition ConfChangeV2::_internal_transition() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
-  return static_cast<::raftpb::ConfChangeTransition>(_impl_.transition_);
+  return static_cast<::DeftRaft::ConfChangeTransition>(_impl_.transition_);
 }
-inline void ConfChangeV2::_internal_set_transition(::raftpb::ConfChangeTransition value) {
+inline void ConfChangeV2::_internal_set_transition(::DeftRaft::ConfChangeTransition value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
 
                                           assert(::google::protobuf::internal::ValidateEnum(
-                                              value, ::raftpb::ConfChangeTransition_internal_data_));
+                                              value, ::DeftRaft::ConfChangeTransition_internal_data_));
                                           _impl_.transition_ = value;
 }
 
-// repeated .raftpb.ConfChangeSingle changes = 2;
+// repeated .DeftRaft.ConfChangeSingle changes = 2;
 inline int ConfChangeV2::_internal_changes_size() const {
   return _internal_changes().size();
 }
@@ -4118,40 +4118,40 @@ inline void ConfChangeV2::clear_changes() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.changes_.Clear();
 }
-inline ::raftpb::ConfChangeSingle* PROTOBUF_NONNULL ConfChangeV2::mutable_changes(int index)
+inline ::DeftRaft::ConfChangeSingle* PROTOBUF_NONNULL ConfChangeV2::mutable_changes(int index)
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_mutable:raftpb.ConfChangeV2.changes)
+  // @@protoc_insertion_point(field_mutable:DeftRaft.ConfChangeV2.changes)
   return _internal_mutable_changes()->Mutable(index);
 }
-inline ::google::protobuf::RepeatedPtrField<::raftpb::ConfChangeSingle>* PROTOBUF_NONNULL ConfChangeV2::mutable_changes()
+inline ::google::protobuf::RepeatedPtrField<::DeftRaft::ConfChangeSingle>* PROTOBUF_NONNULL ConfChangeV2::mutable_changes()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_mutable_list:raftpb.ConfChangeV2.changes)
+  // @@protoc_insertion_point(field_mutable_list:DeftRaft.ConfChangeV2.changes)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   return _internal_mutable_changes();
 }
-inline const ::raftpb::ConfChangeSingle& ConfChangeV2::changes(int index) const
+inline const ::DeftRaft::ConfChangeSingle& ConfChangeV2::changes(int index) const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:raftpb.ConfChangeV2.changes)
+  // @@protoc_insertion_point(field_get:DeftRaft.ConfChangeV2.changes)
   return _internal_changes().Get(index);
 }
-inline ::raftpb::ConfChangeSingle* PROTOBUF_NONNULL ConfChangeV2::add_changes()
+inline ::DeftRaft::ConfChangeSingle* PROTOBUF_NONNULL ConfChangeV2::add_changes()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  ::raftpb::ConfChangeSingle* _add = _internal_mutable_changes()->Add();
-  // @@protoc_insertion_point(field_add:raftpb.ConfChangeV2.changes)
+  ::DeftRaft::ConfChangeSingle* _add = _internal_mutable_changes()->Add();
+  // @@protoc_insertion_point(field_add:DeftRaft.ConfChangeV2.changes)
   return _add;
 }
-inline const ::google::protobuf::RepeatedPtrField<::raftpb::ConfChangeSingle>& ConfChangeV2::changes() const
+inline const ::google::protobuf::RepeatedPtrField<::DeftRaft::ConfChangeSingle>& ConfChangeV2::changes() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_list:raftpb.ConfChangeV2.changes)
+  // @@protoc_insertion_point(field_list:DeftRaft.ConfChangeV2.changes)
   return _internal_changes();
 }
-inline const ::google::protobuf::RepeatedPtrField<::raftpb::ConfChangeSingle>&
+inline const ::google::protobuf::RepeatedPtrField<::DeftRaft::ConfChangeSingle>&
 ConfChangeV2::_internal_changes() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.changes_;
 }
-inline ::google::protobuf::RepeatedPtrField<::raftpb::ConfChangeSingle>* PROTOBUF_NONNULL
+inline ::google::protobuf::RepeatedPtrField<::DeftRaft::ConfChangeSingle>* PROTOBUF_NONNULL
 ConfChangeV2::_internal_mutable_changes() {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return &_impl_.changes_;
@@ -4169,7 +4169,7 @@ inline void ConfChangeV2::clear_context() {
 }
 inline const std::string& ConfChangeV2::context() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:raftpb.ConfChangeV2.context)
+  // @@protoc_insertion_point(field_get:DeftRaft.ConfChangeV2.context)
   return _internal_context();
 }
 template <typename Arg_, typename... Args_>
@@ -4177,12 +4177,12 @@ PROTOBUF_ALWAYS_INLINE void ConfChangeV2::set_context(Arg_&& arg, Args_... args)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.context_.SetBytes(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:raftpb.ConfChangeV2.context)
+  // @@protoc_insertion_point(field_set:DeftRaft.ConfChangeV2.context)
 }
 inline std::string* PROTOBUF_NONNULL ConfChangeV2::mutable_context()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_context();
-  // @@protoc_insertion_point(field_mutable:raftpb.ConfChangeV2.context)
+  // @@protoc_insertion_point(field_mutable:DeftRaft.ConfChangeV2.context)
   return _s;
 }
 inline const std::string& ConfChangeV2::_internal_context() const {
@@ -4201,7 +4201,7 @@ inline std::string* PROTOBUF_NONNULL ConfChangeV2::_internal_mutable_context() {
 }
 inline std::string* PROTOBUF_NULLABLE ConfChangeV2::release_context() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:raftpb.ConfChangeV2.context)
+  // @@protoc_insertion_point(field_release:DeftRaft.ConfChangeV2.context)
   if ((_impl_._has_bits_[0] & 0x00000001u) == 0) {
     return nullptr;
   }
@@ -4223,7 +4223,7 @@ inline void ConfChangeV2::set_allocated_context(std::string* PROTOBUF_NULLABLE v
   if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.context_.IsDefault()) {
     _impl_.context_.Set("", GetArena());
   }
-  // @@protoc_insertion_point(field_set_allocated:raftpb.ConfChangeV2.context)
+  // @@protoc_insertion_point(field_set_allocated:DeftRaft.ConfChangeV2.context)
 }
 
 #ifdef __GNUC__
@@ -4231,35 +4231,35 @@ inline void ConfChangeV2::set_allocated_context(std::string* PROTOBUF_NULLABLE v
 #endif  // __GNUC__
 
 // @@protoc_insertion_point(namespace_scope)
-}  // namespace raftpb
+}  // namespace DeftRaft
 
 
 namespace google {
 namespace protobuf {
 
 template <>
-struct is_proto_enum<::raftpb::EntryType> : std::true_type {};
+struct is_proto_enum<::DeftRaft::EntryType> : std::true_type {};
 template <>
-inline const EnumDescriptor* PROTOBUF_NONNULL GetEnumDescriptor<::raftpb::EntryType>() {
-  return ::raftpb::EntryType_descriptor();
+inline const EnumDescriptor* PROTOBUF_NONNULL GetEnumDescriptor<::DeftRaft::EntryType>() {
+  return ::DeftRaft::EntryType_descriptor();
 }
 template <>
-struct is_proto_enum<::raftpb::MessageType> : std::true_type {};
+struct is_proto_enum<::DeftRaft::MessageType> : std::true_type {};
 template <>
-inline const EnumDescriptor* PROTOBUF_NONNULL GetEnumDescriptor<::raftpb::MessageType>() {
-  return ::raftpb::MessageType_descriptor();
+inline const EnumDescriptor* PROTOBUF_NONNULL GetEnumDescriptor<::DeftRaft::MessageType>() {
+  return ::DeftRaft::MessageType_descriptor();
 }
 template <>
-struct is_proto_enum<::raftpb::ConfChangeTransition> : std::true_type {};
+struct is_proto_enum<::DeftRaft::ConfChangeTransition> : std::true_type {};
 template <>
-inline const EnumDescriptor* PROTOBUF_NONNULL GetEnumDescriptor<::raftpb::ConfChangeTransition>() {
-  return ::raftpb::ConfChangeTransition_descriptor();
+inline const EnumDescriptor* PROTOBUF_NONNULL GetEnumDescriptor<::DeftRaft::ConfChangeTransition>() {
+  return ::DeftRaft::ConfChangeTransition_descriptor();
 }
 template <>
-struct is_proto_enum<::raftpb::ConfChangeType> : std::true_type {};
+struct is_proto_enum<::DeftRaft::ConfChangeType> : std::true_type {};
 template <>
-inline const EnumDescriptor* PROTOBUF_NONNULL GetEnumDescriptor<::raftpb::ConfChangeType>() {
-  return ::raftpb::ConfChangeType_descriptor();
+inline const EnumDescriptor* PROTOBUF_NONNULL GetEnumDescriptor<::DeftRaft::ConfChangeType>() {
+  return ::DeftRaft::ConfChangeType_descriptor();
 }
 
 }  // namespace protobuf
